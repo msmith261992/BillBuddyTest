@@ -30,7 +30,7 @@ export default class AccordionComponent extends React.Component {
     };
 
     //Populate content underneath each header
-    _renderContent(section, _, isActive) {
+    _renderContent = (section, _, isActive) => {
         return (
             <Animatable.View
                 duration={50}

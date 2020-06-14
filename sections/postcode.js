@@ -20,7 +20,7 @@ export default class Postcode extends React.Component {
     }
 
     //Fetch postcode randomizer
-    onPress = () => {
+    _onPress = () => {
         axios.get(`https://api.postcodes.io/random/postcodes`)
         .then(res => {
             if(res.data.result) {
@@ -48,7 +48,7 @@ export default class Postcode extends React.Component {
                     <InputText placeholder={'SW1A 1AA'} value={this.state.postcode} />
                 </View>
                 <TouchableOpacity  style={[postcodeStyles.postcodeContainer__button, postcodeStyles.postcodeContainer__marginInbetween]}
-                    onPress={this.onPress}>
+                    onPress={this._onPress}>
                     <Text style={postcodeStyles.postcodeContainer__button__text}>
                         Generate Postcode
                     </Text>
