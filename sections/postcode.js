@@ -19,6 +19,7 @@ export default class Postcode extends React.Component {
         postcode: '',
     }
 
+    //Fetch postcode randomizer
     onPress = () => {
         axios.get(`https://api.postcodes.io/random/postcodes`)
         .then(res => {

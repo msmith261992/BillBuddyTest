@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image } from 'react-native';
+
 import headingStyle from '../styles/sections/header.scss';
 
 export default class Header extends React.Component {

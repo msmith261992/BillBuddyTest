@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, FlatList, Image, TouchableOpacity } from 'react-native';
+
 import companiesStyles from '../styles/sections/companiesList.scss';
 import appStyle from '../styles/app.scss';
 

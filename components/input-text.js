@@ -1,5 +1,6 @@
 import React from 'react';
 import {TextInput} from 'react-native';
+
 import InputStyles from '../styles/components/textInput.scss';
 
 let postcode = null;

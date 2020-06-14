@@ -7,6 +7,7 @@ import Header from './sections/header';
 import Banner from './sections/banner';
 import CompaniesList from './sections/companies-list';
 import Postcode from './sections/postcode';
+import Faqs from './sections/faqs';
 
 import appStyle from './styles/app.scss';
 
@@ -38,6 +39,7 @@ export default function App() {
             <Banner />
             <CompaniesList />
             <Postcode />
+            <Faqs />
           </ScrollView>
       </View>
     );

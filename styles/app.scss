@@ -26,3 +26,10 @@
     border-color: #d4d4d4;
     border-bottom-width: 2px;
 }
+
+.sectionTitle {
+    font-family:  $fontFamilyTheme;
+    font-size: $sectionHeader;
+    font-weight: 400;
+    padding: 20px 0;
+}
