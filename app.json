@@ -7,6 +7,10 @@
       "android",
       "web"
     ],
+    "packagerOpts": {
+			"sourceExts": ["js", "jsx", "scss", "sass", "ttf"],
+			"transformer": "node_modules/react-native-sass-transformer/index.js"
+		},
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
