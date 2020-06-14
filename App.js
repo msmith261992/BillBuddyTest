@@ -6,6 +6,7 @@ import { AppLoading } from 'expo';
 import Header from './sections/header';
 import Banner from './sections/banner';
 import CompaniesList from './sections/companies-list';
+import Postcode from './sections/postcode';
 
 import appStyle from './styles/app.scss';
 
@@ -36,6 +37,7 @@ export default function App() {
             <Header />
             <Banner />
             <CompaniesList />
+            <Postcode />
           </ScrollView>
       </View>
     );

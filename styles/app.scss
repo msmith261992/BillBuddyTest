@@ -1,3 +1,5 @@
+@import './styles/theme.scss';
+
 .container {
     margin-bottom: 340;
     height: 100%;
@@ -7,4 +9,20 @@
 .mainSidePadding {
     padding-left: 17px;
     padding-right: 17px;
+}
+
+.newSectionVerticalPadding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.subContentText {
+    font-family:  $fontFamilyTheme;
+    font-size: 16px;
+    line-height:24px;
+}
+
+.endSectionBorder {
+    border-color: #d4d4d4;
+    border-bottom-width: 2px;
 }
