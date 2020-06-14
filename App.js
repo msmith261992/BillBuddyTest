@@ -1,23 +1,44 @@
-import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import { View, ScrollView } from 'react-native';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 
 import Header from './sections/header';
+import Banner from './sections/banner';
+import CompaniesList from './sections/companies-list';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <ScrollView>
-        <Header />
-      </ScrollView>
-    </View>
-  );
+import appStyle from './styles/app.scss';
+
+//Function to fetch custom font
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'Valera-Round': require('./assets/fonts/VarelaRound-Regular.ttf')
+  });
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+console.disableYellowBox = true;
+
+export default function App() {
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  // Load in custom font
+  if(!dataLoaded) {
+    return (
+      <AppLoading 
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+      />
+    )
+  } else {
+    return (
+      <View style={appStyle.container}>
+          <ScrollView>
+            <Header />
+            <Banner />
+            <CompaniesList />
+          </ScrollView>
+      </View>
+    );
+  }
+}
+
